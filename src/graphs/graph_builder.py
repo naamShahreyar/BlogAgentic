@@ -23,3 +23,8 @@ class GraphBuilder:
         self.graph.add_edge('content_generation', END)
         
         return self.graph
+    
+    def setup_graph(self, usecase):
+        if usecase == "topic":
+            return self.build_topic_graph().compile()
+            
